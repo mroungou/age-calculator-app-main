@@ -25,32 +25,38 @@ function calculateAge() {
     
 }
 
-function validDay(day) {
+function validDay() {
     const day = parseInt(document.getElementById('day').value);
     const month = document.getElementById('month');
-    if (day === ' ' ) {
-        setError(day, validationMessage.empty.replace(':attribute', 'day'));
+
+    const dayInput = document.getElementById('day');
+    if (isNaN(day)) {
+        setError(dayInput, validationMessage.empty.replace(':attribute', 'day'));
     } else if ( day > monthsOfYear[month]) {
-        setError(day, validationMessage.day)
+        setError(dayInput, validationMessage.day)
     }
 }
 
-function validMonth (month) {
+function validMonth () {
     const month = parseInt(document.getElementById('month').value);
-    if (month === ' ' ) {
-        setError(month, validationMessage.empty.replace(':attribute', 'month'));
-    } else if (month > 12) {
-        setError(month, validationMessage.empty.replace('attribute', 'month'));
+
+    const monthInput = document.getElementById('month');
+    if (isNaN(month)) {
+        setError(monthInput, validationMessage.empty.replace(':attribute', 'month'));
+    } else if (month > 12 || month < 1) {
+        setError(monthInput, validationMessage.empty.replace('attribute', 'month'));
     }
 }
 
-function validYear (year) {
+function validYear () {
     const year = parseInt(document.getElementById('year').value);
     const currentYear = new Date().getFullYear();
-    if (year === ' ') {
-        setError(year, validationMessage.empty.replace(':attribute', 'year'));
+
+    const yearInput = document.getElementById('year');
+    if (isNaN(year)) {
+        setError(yearInput, validationMessage.empty.replace(':attribute', 'year'));
     } else if (year > currentYear) {
-        setError(year, validationMessage.year)
+        setError(yearInput, validationMessage.year)
     }
 }
 
@@ -71,6 +77,10 @@ window.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
+        validDay();
+        validMonth();
+        validYear();
+        
         calculateAge();
     })
 })
