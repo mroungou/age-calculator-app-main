@@ -9,4 +9,81 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 1%, 44%);
+}
+
+main {
+  margin: 1rem;
+  padding: 8rem 1rem 15rem;
+  background-color: hsl(0, 0%, 86%);
+}
+main .calculator {
+  padding: 2rem 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px 20px 70px 20px;
+}
+main .calculator form .settings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main .calculator form label {
+  display: block;
+  color: hsl(0, 1%, 44%);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+}
+main .calculator form input {
+  box-sizing: border-box;
+  width: 110%;
+  padding: 0.75rem 1.15rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 86%);
+  outline: none;
+}
+main .calculator form .inputs {
+  margin-right: 1rem;
+}
+main .calculator form .submit {
+  width: 50px;
+  height: 50px;
+  background-color: hsl(259, 100%, 65%);
+  background-position: center;
+  background-size: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  padding: 2rem;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+main .calculated p {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-style: italic;
+  margin: 0;
+}
+main .calculated .metric .output {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-style: italic;
+  color: hsl(259, 100%, 65%);
+}
+
+.has-error label {
+  color: hsl(0, 100%, 67%) !important;
+}
+.has-error input {
+  border-color: hsl(0, 100%, 67%) !important;
+}
+.has-error .error {
+  color: hsl(0, 100%, 67%) !important;
 }/*# sourceMappingURL=main.css.map */
