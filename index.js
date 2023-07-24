@@ -32,9 +32,12 @@ function calculateAge() {
     const birthDate = new Date(year, month, day);
     const currentDate = new Date();
 
-    let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
-    let ageMonths = currentDate.getMonth() - birthDate.getMonth();
-    let ageDays = currentDate.getDate() - birthDate.getDay();
+    let ageMilliSeconds = currentDate - birthDate;
+    let ageDate = new Date(ageMilliSeconds);
+
+    let ageYears = ageDate.getUTCFullYear() - 1970;
+    let ageMonths = ageDate.getUTCMonth();
+    let ageDays = ageDate.getUTCDate() - 1;
 
     // need to adjust the age if the birthday hasn't occured yet
 
@@ -43,7 +46,6 @@ function calculateAge() {
         currentDate.getDate() < birthDate.getDate())) {
             ageYears -- ;
             if (currentDate.getMonth() < birthDate.getMonth()) {
-
                 ageMonths += 12;
             }
     }
@@ -118,49 +120,7 @@ function validYear () {
     }
 }
 
-// function calculateMonths () {
-//     const day = parseInt(document.getElementById('day').value);
-//     const month = parseInt(document.getElementById('month').value);
-//     const year = parseInt(document.getElementById('year').value);
 
-//     const birthDate = new Date(year, month, day);
-//     const currentDate = new Date();
-
-//     let ageMonths = currentDate.getMonth() - birthDate.getMonth();
-
-//     if (ageMonths < 0) {
-//         ageMonths += 12
-//     }
-
-//     const monthCalc = document.getElementById('months-output');
-//     monthCalc.innerHTML = ageMonths;
-// }
-
-
-// function calculateYear() {
-//     const day = parseInt(document.getElementById('day').value);
-//     const month = parseInt(document.getElementById('month').value) - 1;
-//     const year = parseInt(document.getElementById('year').value);
-
-//     const birthDate = new Date(year, month, day);
-//     const currentDate = new Date();
-
-//     let ageYears = currentDate.getFullYear() - birthDate.getFullYear();
-//     // need to adjust the age if the birthday hasn't occured yet
-
-//     if ((currentDate.getMonth() < birthDate.getMonth())||
-//         (currentDate.getMonth() === birthDate.getMonth() && 
-//         currentDate.getDate() < birthDate.getDate())) {
-//             ageYears --;
-//             ageMonths += 12;
-//         }
-// }
-
-// function calculateYear() {
-//     const year = parseInt(document.getElementById('year').value);
-//     const currentYear = new Date().getFullYear();
-//     const diffYear = 
-// }
 
 function setError(element, message) {
     const inputField = element.parentElement;
