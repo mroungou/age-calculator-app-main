@@ -114,3 +114,42 @@ main {
         border-color: #0c58c6 !important;
     }
 }
+
+@media screen and (min-width: 1440px) {
+    main {
+        padding: 12rem 27rem;
+        .calculator {
+            padding: 2rem;
+            .settings {
+                width: 85%;
+            }
+            form {
+                input {
+                    width: 100%;
+                    padding: 0.75rem;
+                }
+                input:hover, 
+                input:focus {
+                    border-color: $purple;
+                }
+                .submit {
+                    margin-left: auto !important;
+                    margin-right: 0 !important;
+                    margin-bottom: 0 !important;
+                }
+                .submit:hover {
+                    background-color: $offBlack;
+                }
+            }
+            .calculated {
+                line-height: 1.23;
+                p {
+                    font-size: 3.5rem;
+                }
+                .metric .output {
+                    font-size: 3.5rem;
+                }
+            }
+        }
+    }
+}

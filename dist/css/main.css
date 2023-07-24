@@ -93,4 +93,41 @@ main .calculated .metric .output {
 
 .success input {
   border-color: #0c58c6 !important;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 12rem 27rem;
+  }
+  main .calculator {
+    padding: 2rem;
+  }
+  main .calculator .settings {
+    width: 85%;
+  }
+  main .calculator form input {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  main .calculator form input:hover,
+  main .calculator form input:focus {
+    border-color: hsl(259, 100%, 65%);
+  }
+  main .calculator form .submit {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  main .calculator form .submit:hover {
+    background-color: hsl(0, 0%, 8%);
+  }
+  main .calculator .calculated {
+    line-height: 1.23;
+  }
+  main .calculator .calculated p {
+    font-size: 3.5rem;
+  }
+  main .calculator .calculated .metric .output {
+    font-size: 3.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
