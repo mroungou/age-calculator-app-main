@@ -116,6 +116,9 @@ main {
 }
 
 @media screen and (min-width: 1440px) {
+    body {
+        background-color: $lightGrey;
+    }
     main {
         padding: 12rem 27rem;
         .calculator {
@@ -147,7 +150,7 @@ main {
                     font-size: 3.5rem;
                 }
                 .metric .output {
-                    font-size: 3.5rem;
+                    font-size: 4rem;
                 }
             }
         }

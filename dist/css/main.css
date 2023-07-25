@@ -96,6 +96,9 @@ main .calculated .metric .output {
 }
 
 @media screen and (min-width: 1440px) {
+  body {
+    background-color: hsl(0, 0%, 86%);
+  }
   main {
     padding: 12rem 27rem;
   }
@@ -128,6 +131,6 @@ main .calculated .metric .output {
     font-size: 3.5rem;
   }
   main .calculator .calculated .metric .output {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }/*# sourceMappingURL=main.css.map */
